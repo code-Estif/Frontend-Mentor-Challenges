@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Raleway', sans-serif;
+      background: hsl(229, 57%, 11%);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-image: url('images/bg-desktop.png');
+      background-repeat: no-repeat;
+      background-position: bottom;
+      background-size: cover;
+    }
+
+    .container {
+      display: flex;
+      gap: 2rem;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      max-width: 900px;
+      width: 90%;
+    }
+
+    .left-card {
+      background: hsl(228, 56%, 26%);
+      padding: 2rem;
+      border-radius: 10px 100px 10px 10px;
+      width: 280px;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .icons {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .icons div {
+      background: hsl(229, 57%, 11%);
+      padding: 0.8rem;
+      border-radius: 8px;
+      width: 45px;
+      height: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .right-card {
+      background: hsl(228, 56%, 26%);
+      padding: 2rem;
+      border-radius: 10px;
+      width: 500px;
+      position: relative;
+    }
+
+    .used {
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .bar {
+      background: hsl(229, 57%, 11%);
+      border-radius: 20px;
+      height: 20px;
+      width: 100%;
+      overflow: hidden;
+      margin-bottom: 0.5rem;
+    }
+
+    .progress {
+      background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+      height: 100%;
+      width: 81.5%;
+      border-radius: 20px;
+      position: relative;
+    }
+
+    .progress::after {
+      content: "";
+      position: absolute;
+      right: 3px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 14px;
+      height: 14px;
+      background: #fff;
+      border-radius: 50%;
+    }
+
+    .gb-values {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      opacity: 0.8;
+    }
+
+    .bubble {
+      position: absolute;
+      top: -40px;
+      right: 30px;
+      background: #fff;
+      color: #000;
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+
+    .bubble span {
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: gray;
+      margin-left: 5px;
+    }
+
+    .bubble::after {
+      content: "";
+      position: absolute;
+      bottom: -12px;
+      right: 30px;
+      width: 0;
+      height: 0;
+      border-left: 12px solid transparent;
+      border-right: 12px solid transparent;
+      border-top: 12px solid #fff;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        background-image: url('https://raw.githubusercontent.com/frontend-mentor-challenges/fylo-data-storage-component/main/images/bg-mobile.png');
+        background-position: top;
+        background-size: cover;
+      }
+
+      .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+      }
+
+      .left-card {
+        width: 100%;
+        max-width: 350px;
+      }
+
+      .right-card {
+        width: 100%;
+        max-width: 350px;
+        text-align: center;
+        padding-bottom: 3rem;
+      }
+
+      .bubble {
+        top: auto;
+        bottom: -40px;
+        right: 50%;
+        transform: translateX(50%);
+        border-radius: 10px;
+      }
+
+      .bubble::after {
+        display: none;
+      }
+    }
