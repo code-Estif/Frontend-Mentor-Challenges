@@ -8,15 +8,21 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     color: rgb(58, 28, 58);
-    background-image: url(assets/images/background-pattern-desktop.svg);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: hsl(275, 100%, 97%);
+    background-image:
+        url(assets/images/background-pattern-desktop.svg),
+        linear-gradient(to bottom, #301534 0%, #301534 30%, hsl(275, 100%, 97%) 55%, hsl(275, 100%, 97%) 100%);
+    background-position: top center, center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100% auto, 100% 100%;
+    font-family: 'Work Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .faq-container{
     box-shadow: 0 2px 3px black;
     height: 500px;
-    max-width: 500px;
+    max-width: 520px;
     border-radius: 12px;
     display: block;
     padding-left: 20px;
@@ -72,4 +78,17 @@ img{
   font-size: 0.95rem;
   line-height: 1.6;
   padding-left: 1.3rem;
+}
+
+@media (max-width: 600px) {
+    body {
+        background-image:
+            url(assets/images/background-pattern-mobile.svg),
+            linear-gradient(to bottom, #301534 0%, #301534 35%, hsl(275, 100%, 97%) 55%, hsl(275, 100%, 97%) 100%);
+        background-position: top center, center;
+        background-repeat: no-repeat, no-repeat;
+        background-size: 100% auto, 100% 100%;
+        overflow: scroll;
+        height: 90vh;
+    }
 }

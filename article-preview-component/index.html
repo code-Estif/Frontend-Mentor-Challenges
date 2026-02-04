@@ -25,26 +25,26 @@
             <span class="author-date">28 Jun 2020</span>
           </div>
         </div>
-        <div
-              class="footer__share-popup"
-              role="menu"
-              aria-label="share options"
-              aria-hidden="true"
-            >
-              <a href="#"
-                ><img src="images/icon-facebook.svg" alt="Facebook"
-              /></a>
-              <a href="#"
-                ><img src="images/icon-twitter.svg" alt="Twitter"
-              /></a>
-              <a href="#"
-                ><img src="images/icon-pinterest.svg" alt="Pinterest"
-              /></a>
-            </div>
-        <button class="share-btn" aria-label="Share">
-          <svg viewBox="0 0 15 13"><path d="M15 6.5l-5.5-6v4c-6.5.5-7.5 5.5-7.5 8.5 2.5-3.5 7.5-4 7.5-4v4l5.5-6z"/></svg>
-        </button>
-        
+        <div class="share-wrapper">
+          <div class="share-popup" role="menu" aria-label="share options" aria-hidden="true">
+            <span class="share-popup__label">Share</span>
+            <a class="share-popup__icon share-popup__icon--facebook" href="#" aria-label="Share on Facebook">
+              <img src="images/icon-facebook.svg" alt="">
+            </a>
+            <a class="share-popup__icon share-popup__icon--twitter" href="#" aria-label="Share on Twitter">
+              <img src="images/icon-twitter.svg" alt="">
+            </a>
+            <a class="share-popup__icon share-popup__icon--pinterest" href="#" aria-label="Share on Pinterest">
+              <img src="images/icon-pinterest.svg" alt="">
+            </a>
+          </div>
+          <button class="share-btn" type="button" aria-label="Share" aria-expanded="false">
+            <svg class="share-btn__icon" viewBox="0 0 15 13"><path d="M15 6.5l-5.5-6v4c-6.5.5-7.5 5.5-7.5 8.5 2.5-3.5 7.5-4 7.5-4v4l5.5-6z"/></svg>
+          </button>
+        </div>
       </div>
     </div>
   </div>
+  <script src="script.js"></script>
+</body>
+</html>

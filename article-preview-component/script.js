@@ -1,13 +1,27 @@
 const shareButton = document.querySelector(".share-btn");
 const articleCard = document.querySelector(".card");
-const popup = document.querySelector(".footer__share-popup");
+const sharePopup = document.querySelector(".share-popup");
 
-shareButton.addEventListener("click", handleShareButtonClick);
+if (shareButton && articleCard && sharePopup) {
+  shareButton.addEventListener("click", handleShareClick);
 
-function handleShareButtonClick() {
-  const isActive = articleCard.classList.toggle("active");
+  function handleShareClick(e) {
+    e.preventDefault();
+    const isActive = articleCard.classList.toggle("active");
 
-  shareButton.setAttribute("aria-expanded", isActive);
+    shareButton.setAttribute("aria-expanded", isActive);
+    sharePopup.setAttribute("aria-hidden", !isActive);
+  }
 
-  popup.setAttribute("aria-hidden", !isActive);
+  // Close when clicking outside (optional UX improvement)
+  document.addEventListener("click", function (e) {
+    if (
+      articleCard.classList.contains("active") &&
+      !articleCard.contains(e.target)
+    ) {
+      articleCard.classList.remove("active");
+      shareButton.setAttribute("aria-expanded", "false");
+      sharePopup.setAttribute("aria-hidden", "true");
+    }
+  });
 }

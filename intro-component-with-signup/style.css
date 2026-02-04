@@ -1,0 +1,352 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FF7979;
+    background-image: url("./images/bg-intro-desktop.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+h1,
+p {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 1113px;
+    min-height: 558px;
+    max-height: 658px;
+    gap: 48px;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    width: 525px;
+    height: 225px;
+    gap: 16px;
+}
+
+.left-section h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 110%;
+    letter-spacing: -0.5px;
+    color: #FFFFFF;
+    text-align: start;
+}
+
+.left-section p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 165%;
+    letter-spacing: 0.5px;
+    color: #FFFFFF;
+    text-align: start;
+}
+
+.right-section {
+    display: flex;
+    flex-direction: column;
+    width: 540px;
+    min-height: 558px;
+    max-height: 658px;
+    gap: 24px;
+}
+
+.offer-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    border-radius: 10px;
+    background-color: #5E54A4;
+    box-shadow: 0px 8px 0px 0px #00000026;
+}
+
+.offer-section p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 28px;
+    letter-spacing: 0.5px;
+    color: #FFFFFF;
+}
+
+.offer-section span {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0.5px;
+    color: #FFFFFF;
+}
+
+.form-section {
+    width: 540px;
+    min-height: 474px;
+    max-height: 574px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 40px;
+    gap: 24px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 8px 0px 0px #00000026;
+}
+
+.input-section {
+    width: 100%;
+    min-height: 296px;
+    max-height: 396px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.input-area input {
+    width: 100%;
+    height: 56px;
+    padding: 16px 32px;
+    border-radius: 5px;
+    border: 1px solid #979797;
+    outline: none;
+    color: #3D3B48;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 175%;
+    letter-spacing: 0.25px;
+    caret-color: #5E54A4;
+}
+
+.input-area input:focus {
+    border: 1px solid #5E54A4;
+}
+
+.input-area.hasError input {
+    border: 2px solid #FF7979;
+}
+
+.input-area {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-height: 56px;
+    max-height: 81px;
+    width: 100%;
+}
+
+.input-area img {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 24px;
+    height: 24px;
+    visibility: hidden;
+}
+
+.input-area.hasError img {
+    visibility: visible;
+}
+
+.input-area .error-message {
+    text-align: end;
+    color: #FF7979;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 155%;
+    letter-spacing: 0px;
+    display: none;
+}
+
+.input-area.hasError .error-message {
+    display: block;
+}
+
+.input-section input::placeholder {
+    color: #3D3B48BF;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 175%;
+    letter-spacing: 0.25px;
+}
+
+.btn-section {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-section button {
+    width: 100%;
+    height: 56px;
+    border-radius: 5px;
+    background-color: #38CC8B;
+    box-shadow: 0px 4px 0px 0px #00000019;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 175%;
+    letter-spacing: 2px;
+    outline: none;
+    border: 0;
+}
+
+.btn-section button:hover {
+    background-color: #77E2B3;
+    cursor: pointer;
+    transition: 0.2s ease
+}
+
+.btn-section p {
+    color: #BAB7D4;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 125%;
+    letter-spacing: 0.2px;
+}
+
+.btn-section span {
+    color: #FF7979;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 125%;
+    letter-spacing: 0px;
+}
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+    display: none;
+}
+
+input[type="password"]::-webkit-credentials-auto-fill-button {
+    display: none !important;
+}
+
+@media screen and (max-width:1150px) and (min-width:650px) {
+    body {
+        min-height: 100vh;
+        padding: 40px 0px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 540px;
+        min-height: 847px;
+        max-height: 947px;
+        gap: 64px;
+    }
+
+    .left-section {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .left-section h1 {
+        text-align: center;
+    }
+
+    .left-section p {
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width:650px) {
+    body {
+        min-height: 100vh;
+        padding: 40px 10px;
+    }
+
+    .container {
+        flex-direction: column;
+        width: 327px;
+        min-height: 844px;
+        max-height: 944px;
+        gap: 64px;
+    }
+
+    .left-section {
+        display: flex;
+        flex-direction: column;
+        width: 327px;
+        height: 226px;
+        gap: 16px;
+    }
+
+    .left-section h1 {
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 150%;
+        letter-spacing: 0.5px;
+        text-align: center;
+    }
+
+    .left-section p {
+        line-height: 160%;
+        letter-spacing: 1.8px;
+        text-align: center;
+    }
+
+    .right-section {
+        width: 327px;
+        min-height: 554px;
+        max-height: 654px;
+    }
+
+    .offer-section {
+        width: 100%;
+        height: 88px;
+    }
+
+    .form-section {
+        width: 327px;
+        min-height: 442px;
+        max-height: 542px;
+        padding: 24px;
+        gap: 16px;
+    }
+
+    .input-section {
+        min-height: 272px;
+        max-height: 372px;
+        gap: 16px;
+    }
+
+    .btn-section {
+        height: 106px;
+        text-align: center;
+    }
+
+    .btn-section p {
+        letter-spacing: 0.3px;
+    }
+
+    .btn-section span {
+        letter-spacing: 0.2px;
+    }
+}
