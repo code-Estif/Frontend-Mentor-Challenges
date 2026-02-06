@@ -1,0 +1,287 @@
+:root {
+  --red-500: hsl(10, 79%, 65%);
+  --blue-300: hsl(186, 34%, 65%);
+  --brown-950: hsl(25, 47%, 15%);
+  --brown-400: hsl(28, 10%, 53%);
+  --red-100: hsl(26, 66%, 93%);
+  --cream: hsl(31, 30%, 84%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
+  background-color: var(--cream);
+  color: var(--brown-950);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 540px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.balance-card {
+  background: var(--red-500);
+  border-radius: 20px;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--white);
+}
+
+.balance-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.balance-title {
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.balance-amount {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.balance-logo {
+  width: 60px;
+  height: 40px;
+}
+
+.balance-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+.chart-card {
+  background-color: var(--white);
+  border-radius: 20px;
+  padding: 24px 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.chart-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--brown-950);
+  margin-bottom: 52px;
+}
+
+.chart-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 12px;
+  margin-bottom: 24px;
+  min-height: 200px;
+}
+
+.chart-bar-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.chart-bar {
+  width: 100%;
+  max-width: 50px;
+  background-color: var(--red-500);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.chart-bar:hover {
+  opacity: 0.7;
+}
+
+.chart-bar.today {
+  background-color: var(--blue-300);
+}
+
+.chart-day {
+  font-size: 12px;
+  color: var(--brown-400);
+  font-weight: 400;
+}
+
+.chart-tooltip {
+  position: absolute;
+  top: -48px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--brown-950);
+  color: var(--white);
+  padding: 8px 7px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 700;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.chart-bar-wrapper:hover .chart-tooltip {
+  opacity: 1;
+}
+
+.chart-tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid var(--brown-950);
+}
+
+.chart-divider {
+  height: 2px;
+  background-color: var(--red-100);
+  margin: 24px 0;
+}
+
+
+.chart-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer-label {
+  font-size: 15px;
+  color: var(--brown-400);
+  font-weight: 400;
+}
+
+.footer-amount {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--brown-950);
+  line-height: 1.2;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  padding-top: 24px;
+}
+
+.footer-percentage {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--brown-950);
+}
+
+.attribution {
+  margin-top: 20px;
+  font-size: 11px;
+  text-align: center;
+  color: var(--brown-400);
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: 80px 20px;
+  }
+
+  .container {
+    gap: 24px;
+  }
+
+  .balance-card {
+    padding: 28px 32px;
+  }
+
+  .balance-amount {
+    font-size: 32px;
+  }
+
+  .chart-card {
+    padding: 32px 40px;
+  }
+
+  .chart-title {
+    font-size: 32px;
+    margin-bottom: 66px;
+  }
+
+  .chart-container {
+    gap: 17px;
+    margin-bottom: 32px;
+  }
+
+  .chart-bar {
+    max-width: 35px;
+  }
+
+  .chart-divider {
+    margin: 32px 0;
+  }
+
+  .footer-amount {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 374px) {
+  .chart-container {
+    gap: 8px;
+  }
+
+  .chart-bar {
+    max-width: 35px;
+  }
+
+  .chart-day {
+    font-size: 11px;
+  }
+}
