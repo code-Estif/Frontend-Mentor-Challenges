@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Project tracking intro component</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="nav-container">
+        <img src="./images/logo.svg" alt="Logo" class="logo">
+        <ul class="nav-links">
+          <li><a href="#" class="nav-link">Product</a></li>
+          <li><a href="#" class="nav-link">Features</a></li>
+          <li><a href="#" class="nav-link">Pricing</a></li>
+          <li><span class="nav-dot" aria-hidden="true"></span></li>
+          <li><a href="#" class="nav-link">Login</a></li>
+        </ul>
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <img src="./images/icon-hamburger.svg" alt="Menu" class="menu-icon">
+        </button>
+      </div>
+      <div class="mobile-overlay" aria-hidden="true"></div>
+      <div class="mobile-menu" aria-hidden="true">
+        <ul class="mobile-nav-links">
+          <li><a href="#" class="mobile-nav-link">Product</a></li>
+          <li><a href="#" class="mobile-nav-link">Features</a></li>
+          <li><a href="#" class="mobile-nav-link">Pricing</a></li>
+          <li><a href="#" class="mobile-nav-link">Login</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-tagline">
+            <span class="badge">New</span>
+            <span class="tagline-text">Monograph Dashboard</span>
+          </div>
+          <h1 class="hero-title">Powerful insights<br>into your team</h1>
+          <p class="hero-description">Project planning and time tracking for agile teams</p>
+          <div class="cta-container">
+            <button class="cta-button">Schedule a demo</button>
+            <a href="#" class="cta-link">to see a preview</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="./images/illustration-devices.svg" alt="Devices illustration" class="devices-img">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
